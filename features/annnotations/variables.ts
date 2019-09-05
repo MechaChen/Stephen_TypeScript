@@ -1,8 +1,4 @@
-// Type Inference
-// Variable Declaration = Variable Initialization
 const color = "red";
-// if declaration and initialization are on the same line,
-// TypeScript will figure out the type of 'color' for us
 
 let apples;
 apples = 5; // when hover it, it show let apples: any
@@ -32,11 +28,17 @@ let point: { x: number; y: number } = {
 };
 
 // Function
-// what we care about Function is (will go into Annotation):
-//   1. what argument into Func
-//   2. what value Func return
-
-// const FuncName: Type Annotation = Real Function
 const logNumber: (i: number) => void = (i: number) => {
   console.log(i);
 };
+
+// When to use annotations
+// 1) Functions that returns the 'any' type
+const json = '{"x": 10, "y": 20}';
+const coordinates = JSON.parse(json); // JSON.parse() return 'any' type
+// 'false'              ->      boolean
+// '4'                  ->      number
+// '{"value: 5"}'       ->      {value: number}
+// '{"name": "alex"}    ->      {name: string}
+
+console.log(coordinates); // {x: 10, y: 20}
