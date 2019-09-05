@@ -1,4 +1,4 @@
-let apples: number = 5;
+let apples = 5; // still a number -> Type Inference
 let speed: string = "fast";
 let hasName: boolean = true;
 
@@ -19,8 +19,16 @@ let car: Car = new Car();
 
 // Object literal
 let point: { x: number; y: number } = {
-  // x: 'alsdkfj' => error
   x: 10,
   y: 20
-  //   a: 20 => error
+};
+
+// Function
+// what we care about Function is (will go into Annotation):
+//   1. what argument into Func
+//   2. what value Func return
+
+// const FuncName: Type Annotation = Real Function
+const logNumber: (i: number) => void = (i: number) => {
+  console.log(i);
 };
