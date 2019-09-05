@@ -1,4 +1,12 @@
-let apples = 5; // still a number -> Type Inference
+// Type Inference
+// Variable Declaration = Variable Initialization
+const color = "red";
+// if declaration and initialization are on the same line,
+// TypeScript will figure out the type of 'color' for us
+
+let apples;
+apples = 5; // when hover it, it show let apples: any
+
 let speed: string = "fast";
 let hasName: boolean = true;
 
